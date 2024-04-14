@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd 
-import matplotlib as mp 
+
 import seaborn as sb 
 import plotly as pl 
 import plotly.express as px
@@ -14,6 +14,9 @@ df = df.sort_values("Date")
 
 df["Month"] = df['Date'].apply(lambda x: str(x.year) + "-" + str(x.month))
 Month = st.sidebar.selectbox("Mês",df['Month'].unique())
+
+df["Costumer"] = df['Costumer type']
+Costumer = st.sidebar.selectbox("Tipo de Cliente",df['Costumer type'].unique())
 
 df_filtered = df[df['Month'] == Month]
 
