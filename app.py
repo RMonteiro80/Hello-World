@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd 
 
-import seaborn as sb 
-import plotly as pl 
+
+
 import plotly.express as px
 
 st.set_page_config(layout="wide")
